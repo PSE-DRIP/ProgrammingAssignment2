@@ -11,7 +11,7 @@
   }
   get <- function() x
   setinverse <- function(inverse) m <<- inverse
-  get inverse <- function() m
+  getinverse <- function() m
   list(set=set,
        get=get,
        setinverse = setinverse,
@@ -37,6 +37,7 @@
     m
   }
   
-    }
     ## Return a matrix that is the inverse of 'x'
-  }
+  x <- matrix(c(3,6,9,12),2,2)
+  x1 <- makeCacheMatrix(x)
+  cacheSolve(x1)
